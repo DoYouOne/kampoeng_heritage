@@ -25,6 +25,7 @@ Route::get('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->n
 //Hak akses super admin
 Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/Sadmin_beranda', [App\Http\Controllers\Sadmin\BerandaController::class, 'index'])->name('beranda');
+    Route::get('/Sadmin_event', [App\Http\Controllers\Sadmin\EventController::class, 'index'])->name('event');
 });
 
 //Hak akses admin
