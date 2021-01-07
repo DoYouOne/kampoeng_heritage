@@ -21,7 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>Metronic | The Ultimate Multi-purpose Bootstrap Admin Dashboard Theme | Theme #1 | Blank Page Layout</title>
+        <title>Kampoeng Heritage | Super Admin</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="#1 selling multi-purpose bootstrap admin theme sold in themeforest marketplace packed with angularjs, material design, rtl support with over thausands of templates and ui elements and plugins to power any type of web applications including saas and admin dashboards. Preview page of Theme #1 for blank page layout"
@@ -154,19 +154,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
                             </li>
                             <li class="nav-item  ">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_beranda') }}" class="nav-link nav-toggle">
                                     <i class="icon-home"></i>
                                     <span class="title">Beranda</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_event') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Event</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_kuliner') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Kuliner</span>
                                     <span class="arrow "></span>
@@ -239,7 +239,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_akomodasi') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Akomodasi</span>
                                     <span class="arrow "></span>
@@ -312,7 +312,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_tentangkami') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Tentang Kami</span>
                                     <span class="arrow "></span>
@@ -385,7 +385,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_ulasan') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Ulasan</span>
                                     <span class="arrow "></span>
@@ -468,22 +468,17 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="page-content-wrapper">
                     <!-- BEGIN CONTENT BODY -->
                     <div class="page-content">
-                        <!-- BEGIN PAGE HEADER-->
-                        <!-- BEGIN THEME PANEL -->
-                        <!-- END THEME PANEL -->
-                        <!-- BEGIN PAGE BAR -->
-                        <!-- END PAGE BAR -->
-                        <!-- BEGIN PAGE TITLE-->
-                        <h1 class="page-title"> Blank Page Layout
-                            <small>blank page layout</small>
-                        </h1>
-                        <!-- END PAGE TITLE-->
-                        <!-- END PAGE HEADER-->
-                        <div class="note note-info">
-                            <p>welcome</p>
+                        <!-- BEGIN PAGE HEAD-->
+                        <div class="page-head">
+                            <!-- BEGIN PAGE TITLE -->
+                            <!-- END PAGE TITLE -->
+                        </div>
+                        <!-- END PAGE HEAD-->
+                         <!-- BEGIN PAGE BASE CONTENT -->
+                        <div class="row">
+                            @yield('content')
                         </div>
                     </div>
-                    <!-- END CONTENT BODY -->
                 </div>
                 <!-- END CONTENT -->
             </div>

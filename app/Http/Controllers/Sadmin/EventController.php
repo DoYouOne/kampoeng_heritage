@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class EventController extends Controller
 {
     public function index(){
-        return view('Sadmin.Event.tampil_event');
+        return view('event.sa_tampil_event');
+    }
+
+    public function tambah(){
+        return view('event.sa_tambah_event');
     }
 }

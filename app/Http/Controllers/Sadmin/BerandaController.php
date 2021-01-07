@@ -12,6 +12,6 @@ class BerandaController extends Controller
 {
 
     public function index(){
-        return view('master_sadmin');
+        return view('beranda.beranda_sadmin');
     }
 }
