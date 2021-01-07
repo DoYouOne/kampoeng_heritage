@@ -5,48 +5,12 @@
     <div class="portlet light bordered">
         <div class="portlet-title">
             <div class="caption">
-                <i class="icon-settings font-dark"></i>
-                <span class="caption-subject font-dark sbold uppercase">Horizontal Form</span>
-            </div>
-            <div class="actions">
-                <div class="btn-group btn-group-devided" data-toggle="buttons">
-                    <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
-                        <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                    <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                        <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                </div>
+                <span class="caption-subject font-dark sbold uppercase">Tambah Data Event</span>
             </div>
         </div>
         <div class="portlet-body form">
             <form class="form-horizontal" role="form">
                 <div class="form-body">
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Block Help</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Enter text">
-                            <span class="help-block"> A block of help text. </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Inline Help</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control input-inline input-medium" placeholder="Enter text">
-                            <span class="help-inline"> Inline help. </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-3 control-label">Input Group</label>
-                        <div class="col-md-9">
-                            <div class="input-inline input-medium">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-user"></i>
-                                    </span>
-                                    <input type="email" class="form-control" placeholder="Email Address"> </div>
-                            </div>
-                            <span class="help-inline"> Inline help. </span>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Email Address</label>
                         <div class="col-md-9">
