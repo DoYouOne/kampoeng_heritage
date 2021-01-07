@@ -30,10 +30,10 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                kiri
+                                
                             </div>
                             <div class="col-md-6">
-                                kanan
+                                
                             </div>
                         </div>
                     </div>                    
