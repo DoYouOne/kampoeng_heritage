@@ -43,67 +43,36 @@
                 <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
                     <thead>
                         <th>No</th>
-                          <th>Tgl</th>
-                          <th>Judul Event</th>
-                          <th>Penyelenggara</th>
-                          <th>Aksi</th>
+                        <th>Foto</th>
+                        <th>Judul Event</th>
+                        <th>Tanggal</th>
+                        <th>Jam</th>
+                        <th>Penyelenggara</th>
+                        <th>Deskripsi</th>
+                        <th>Aksi</th>
                     </thead>
                     <tbody>
-                        {{-- @php $no = 1; @endphp
-                        @foreach ($user as $u)
+                        @php $no = 1; @endphp
+                        @foreach ($event as $e)
                         <tr>
-                            <td>{{ $no }}</td>
-                            <td>1818001</td>
-                            <td>{{ $u->email }}</td>
+                            <td>{{ $no  }}</td>
+                            <td>{{ $e->foto }}</td>
+                            <td>{{ $e->judul }}</td>
+                            <td>{{ $e->waktu }}</td>
+                            <td>{{ $e->jam }}</td>
+                            <td>{{ $e->penyelenggara }}</td>
+                            <td>{{ $e->deskripsi }}</td>
                             <td>
-                                @if ($u->status == 0)
-                                    Admin
-                                @elseif ($u->status == 1)
-                                    Mahasiswa
-                                @elseif ($u->status == 2)
-                                    Alumni
-                                @endif
-                            </td>
-                            <td>
-                                @if (($u->vote != null || ($u->vote != 0)))
-                                    <i class="material-icons" id="y">done</i>
-                                @else
-                                    <i class="material-icons" id="n">clear</i>
-                                @endif
-                            </td>
-                            <td>
-                                @if ($u->id != null)
-                                    <a href="{{ url('delete_vote/') }}/{{ $u->id }}">
-                                        <button class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $u->email }} ?');">Delete</button>
-                                    </a>
-                                    @else
-
-                                @endif
+                                <a href="{{ url('#') }}/{{ $e->id }}">
+                                    <button class="btn btn-primary" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $e->no }} ?');">Edit</button>
+                                </a>
+                                <a href="{{ url('/Sadmin_event/aksi_delete') }}/{{ $e->id }}">
+                                    <button class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $e->no }} ?');">Hapus</button>
+                                </a>
                             </td>
                         </tr>
                         @php $no++; @endphp
-                        @endforeach --}}
-                        <tr>
-                            <td>Ani</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>Mlg</td>
-                            <td>Mlg</td>
-                        </tr>
-                        <tr>
-                            <td>Budi</td>
-                            <td>2</td>
-                            <td>Jkt</td>
-                            <td>1</td>
-                            <td>Mlg</td>
-                        </tr>
-                        <tr>
-                            <td>Mala</td>
-                            <td>3</td>
-                            <td>Mdn</td>
-                            <td>1</td>
-                            <td>Mlg</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
               </div>

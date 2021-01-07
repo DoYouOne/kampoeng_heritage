@@ -20,6 +20,7 @@ class CreateEventTable extends Migration
             $table->string('penyelenggara');
             $table->string('waktu');
             $table->string('jam');
+            $table->string('foto');
             $table->timestamps();
         });
     }
