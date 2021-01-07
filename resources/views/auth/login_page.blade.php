@@ -369,7 +369,7 @@ License: You must have a valid license purchased only from themeforest(the above
             </form>
             <!-- END REGISTRATION FORM -->
         </div>
-        <div class="copyright"> 2014 © Metronic. Admin Dashboard Template. </div>
+        <div class="copyright"> 2020 © DoYouOne. </div>
         <!--[if lt IE 9]>
 <script src="{{ URL::asset ('assets/global/plugins/respond.min.js')}}"></script>
 <script src="{{ URL::asset ('assets/global/plugins/excanvas.min.js')}}"></script>

@@ -5,8 +5,8 @@
     <div class="portlet light bordered">
         <div class="portlet-title">
             <div class="caption">
-                <i class="icon-settings font-dark"></i>
-                <span class="caption-subject font-dark sbold uppercase">Horizontal Form</span>
+                <i class="icon-star font-dark"></i>
+                <span class="caption-subject font-dark sbold uppercase">Tambah Event</span>
             </div>
             <div class="actions">
                 <div class="btn-group btn-group-devided" data-toggle="buttons">
@@ -21,12 +21,22 @@
             <form class="form-horizontal" role="form">
                 <div class="form-body">
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Block Help</label>
+                        <label class="col-md-3 control-label">Judul</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Enter text">
-                            <span class="help-block"> A block of help text. </span>
+                            <input type="text" class="form-control" placeholder="Masukan judul event">
+                            {{-- <span class="help-block"> A block of help text. </span> --}}
                         </div>
                     </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                kiri
+                            </div>
+                            <div class="col-md-6">
+                                kanan
+                            </div>
+                        </div>
+                    </div>                    
                     <div class="form-group">
                         <label class="col-md-3 control-label">Inline Help</label>
                         <div class="col-md-9">
