@@ -30,13 +30,13 @@
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="judul" value="{{ $event->judul }}">
                         </div>
-                    </div> 
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Penyelenggara</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="penyelenggara" value="{{ $event->penyelenggara }}">
                         </div>
-                    </div>            
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Tanggal</label>
                         <div class="col-md-9">
@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label">Foto</label>
                         <div class="col-md-9">
-                            <input type="file" class="form-control" name="gambar">
+                            <input type="file" class="form-control" name="gambar" >
                             <script>document.foo.submit();</script>
                             <small style="color: grey;">*Harap masukkan foto makanan atau tempat</small>
                         </div>
