@@ -87,6 +87,13 @@ Route::group(['middleware' => ['auth','CheckRole:1']], function(){
     Route::get('/Admin_kuliner/update/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'update'])->name('update_kuliner');
     Route::post('/Admin_kuliner/aksi_update/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Admin_kuliner/aksi_delete/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_delete'])->name('aksi_delete');
+    //Akomodasi
+    Route::get('/Admin_akomodasi', [App\Http\Controllers\Admin\AkomodasiController::class, 'index'])->name('akomodasi');
+    Route::get('/Admin_akomodasi/tambah', [App\Http\Controllers\Admin\AkomodasiController::class, 'tambah'])->name('tambah_akomodasi');
+    Route::post('/Admin_akomodasi/aksi_tambah', [App\Http\Controllers\Admin\AkomodasiController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_akomodasi/update/{id}', [App\Http\Controllers\Admin\AkomodasiController::class, 'update'])->name('update_akomodasi');
+    Route::post('/Admin_akomodasi/aksi_update/{id}', [App\Http\Controllers\Admin\AkomodasiController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_akomodasi/aksi_delete/{id}', [App\Http\Controllers\Admin\AkomodasiController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses user
