@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Sadmin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File; 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -40,11 +43,38 @@ class EventController extends Controller
     }
 
     public function aksi_delete($id){
-            $gambar = \App\Models\Event::where('id', $id)->first();
+            $gambar = Event::where('id', $id)->first();
             File::delete(public_path('/uploads/event/').$gambar->foto);
-            \App\Models\Event::where('id', $id)->delete();
+            Event::where('id', $id)->delete();
 
         return redirect('/Sadmin_event');
+    }
+
+    public function update($id){
+        $event['event'] = \App\Models\Event::find($id);
+        return view('event.sa_update_event', $event);
+    }
+
+    public function aksi_update(Request $request, $id){
+        $gambar = Event::select('foto')->where('id', $id)->first();
+        File::delete(public_path('/uploads/event/').$gambar->foto);
+
+        $filetype = '|file|image|mimes:jpeg,png,jpg|max:2048';
+        $filename = $request->file('gambar');
+        $nama_file = time()."_".$filename->getClientOriginalName();
+        $fileloc   = '../public/uploads/event/';
+        $filename->move($fileloc,$nama_file);
+
+        $edit = DB::table('event')->where('id', $id)->update([
+            'judul'         => $request->judul,
+            'deskripsi'     => $request->deskripsi,
+            'penyelenggara' => $request->penyelenggara,
+            'waktu'         => $request->waktu,
+            'jam'           => $request->jam,
+            'foto'          => $nama_file
+        ]);
+
+        return redirect('Sadmin_event');
     }
 
 }

@@ -63,8 +63,8 @@
                             <td>{{ $e->penyelenggara }}</td>
                             <td>{{ $e->deskripsi }}</td>
                             <td>
-                                <a href="{{ url('#') }}/{{ $e->id }}">
-                                    <button class="btn btn-primary" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $e->no }} ?');">Edit</button>
+                                <a href="{{ url('/Sadmin_event/update') }}/{{ $e->id }}">
+                                    <button class="btn btn-primary" >Edit</button>
                                 </a>
                                 <a href="{{ url('/Sadmin_event/aksi_delete') }}/{{ $e->id }}">
                                     <button class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $e->no }} ?');">Hapus</button>
