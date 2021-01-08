@@ -73,6 +73,13 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
 //Hak akses admin
 Route::group(['middleware' => ['auth','CheckRole:1']], function(){
     Route::get('/Admin_beranda', [App\Http\Controllers\Admin\BerandaController::class, 'index'])->name('beranda');
+    //Event
+    Route::get('/Admin_event', [App\Http\Controllers\Admin\EventController::class, 'index'])->name('event');
+    Route::get('/Admin_event/tambah', [App\Http\Controllers\Admin\EventController::class, 'tambah'])->name('tambah_event');
+    Route::post('/Admin_event/aksi_tambah', [App\Http\Controllers\Admin\EventController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_event/update/{id}', [App\Http\Controllers\Admin\EventController::class, 'update'])->name('update_event');
+    Route::post('/Admin_event/aksi_update/{id}', [App\Http\Controllers\Admin\EventController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_event/aksi_delete/{id}', [App\Http\Controllers\Admin\EventController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses user
