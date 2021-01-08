@@ -46,16 +46,22 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/Sadmin_akomodasi', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'index'])->name('akomodasi');
     Route::get('/Sadmin_akomodasi/tambah', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'tambah'])->name('tambah_akomodasi');
     Route::post('/Sadmin_akomodasi/aksi_tambah', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'aksi_tambah'])->name('aksi_tambah');
-    Route::get('/Sadmin_akomodasi/update/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'update'])->name('update_kuliner');
+    Route::get('/Sadmin_akomodasi/update/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'update'])->name('update_akomodasi');
     Route::post('/Sadmin_akomodasi/aksi_update/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Sadmin_akomodasi/aksi_delete/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'aksi_delete'])->name('aksi_delete');
     //Galeri
     Route::get('/Sadmin_galeri', [App\Http\Controllers\Sadmin\GaleriController::class, 'index'])->name('galeri');
     Route::get('/Sadmin_galeri/tambah', [App\Http\Controllers\Sadmin\GaleriController::class, 'tambah'])->name('tambah_galeri');
     Route::post('/Sadmin_galeri/aksi_tambah', [App\Http\Controllers\Sadmin\GaleriController::class, 'aksi_tambah'])->name('aksi_tambah');
-    Route::get('/Sadmin_galeri/update/{id}', [App\Http\Controllers\Sadmin\GaleriController::class, 'update'])->name('update_kuliner');
+    Route::get('/Sadmin_galeri/update/{id}', [App\Http\Controllers\Sadmin\GaleriController::class, 'update'])->name('update_galeri');
     Route::post('/Sadmin_galeri/aksi_update/{id}', [App\Http\Controllers\Sadmin\GaleriController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Sadmin_galeri/aksi_delete/{id}', [App\Http\Controllers\Sadmin\GaleriController::class, 'aksi_delete'])->name('aksi_delete');
+    //Hakakses
+    Route::get('/Sadmin_hakakses', [App\Http\Controllers\Sadmin\HakaksesController::class, 'index'])->name('hakakses');
+    Route::post('/Sadmin_hakakses/aksi_tambah', [App\Http\Controllers\Sadmin\HakaksesController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Sadmin_hakakses/update/{id}', [App\Http\Controllers\Sadmin\HakaksesController::class, 'update'])->name('update_hakakses');
+    Route::post('/Sadmin_hakakses/aksi_update/{id}', [App\Http\Controllers\Sadmin\HakaksesController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Sadmin_hakakses/aksi_delete/{id}', [App\Http\Controllers\Sadmin\HakaksesController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses admin
