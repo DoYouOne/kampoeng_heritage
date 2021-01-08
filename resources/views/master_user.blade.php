@@ -121,7 +121,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
                                 <div class="hor-menu  ">
                                     <ul class="nav navbar-nav">
-                                        <li class="menu-dropdown classic-menu-dropdown active">
+                                        <li class="menu-dropdown classic-menu-dropdown {{ 'beranda' == request()->path() ? 'active' : '' }}">
                                             <a href="{{ url('/beranda') }}"> Beranda
                                                 <span class="arrow"></span>
                                             </a>
@@ -144,7 +144,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-dropdown mega-menu-dropdown  ">
+                                        <li class="menu-dropdown mega-menu-dropdown {{ 'event' == request()->path() ? 'active' : '' }} ">
                                             <a href="{{ url('/event') }}"> Event
                                                 <span class="arrow"></span>
                                             </a>
@@ -262,7 +262,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-dropdown classic-menu-dropdown">
+                                        <li class="menu-dropdown classic-menu-dropdown {{ 'kuliner' == request()->path() ? 'active' : '' }}">
                                             <a href="{{ url('/kuliner') }}"> Kuliner
                                                 <span class="arrow"></span>
                                             </a>
@@ -290,7 +290,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-dropdown mega-menu-dropdown  mega-menu-full">
+                                        <li class="menu-dropdown mega-menu-dropdown  mega-menu-full {{ 'akomodasi' == request()->path() ? 'active' : '' }}">
                                             <a href="{{ url('/akomodasi') }}"> Akomodasi
                                                 <span class="arrow"></span>
                                             </a>
@@ -394,7 +394,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-dropdown classic-menu-dropdown ">
+                                        <li class="menu-dropdown classic-menu-dropdown {{ 'tentang_kami' == request()->path() ? 'active' : '' }}">
                                             <a href="{{ url('/tentang_kami') }}"> Tentang Kami
                                                 <span class="arrow"></span>
                                             </a>
@@ -594,7 +594,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-dropdown classic-menu-dropdown ">
+                                        <li class="menu-dropdown classic-menu-dropdown {{ 'testimoni' == request()->path() ? 'active' : '' }}">
                                             <a href="{{ url('/testimoni') }}">
                                                 <i class="icon-briefcase"></i> Testimoni
                                                 <span class="arrow"></span>
