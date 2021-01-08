@@ -81,13 +81,20 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <!-- END INBOX DROPDOWN -->
                                         <!-- BEGIN USER LOGIN DROPDOWN -->
                                         <li class="dropdown dropdown-user dropdown-dark">
-                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <img alt="" class="img-circle" src="../assets/layouts/layout3/img/avatar9.jpg">
-                                                <span class="username username-hide-mobile">{{ Auth::user()->name }}</span>
-                                            </a>
+                                            @if(Auth::check() == null)
+                                                <a href="{{ url('/login') }}" class="dropdown-toggle">
+                                                    <img alt="" class="img-circle" src="annonym.png" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
+                                                    <span class="username username-hide-mobile">Masuk</span>
+                                                </a>
+                                            @else
+                                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                    <img alt="" class="img-circle" src="../assets/layouts/layout3/img/avatar9.jpg">
+                                                    <span class="username username-hide-mobile">{{ Auth::user()->name }}</span>
+                                                </a>
+                                            @endif
                                             <ul class="dropdown-menu dropdown-menu-default">
                                                 <li>
-                                                    <a href="{{ url('logout') }}">
+                                                    <a href="{{ url('/logout') }}">
                                                         <i class="icon-key"></i> Log Out </a>
                                                 </li>
                                             </ul>
@@ -979,6 +986,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <script src="../assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
     </body>
 
 </html>
