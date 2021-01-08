@@ -73,6 +73,40 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
 //Hak akses admin
 Route::group(['middleware' => ['auth','CheckRole:1']], function(){
     Route::get('/Admin_beranda', [App\Http\Controllers\Admin\BerandaController::class, 'index'])->name('beranda');
+    //Event
+    Route::get('/Admin_event', [App\Http\Controllers\Admin\EventController::class, 'index'])->name('event');
+    Route::get('/Admin_event/tambah', [App\Http\Controllers\Admin\EventController::class, 'tambah'])->name('tambah_event');
+    Route::post('/Admin_event/aksi_tambah', [App\Http\Controllers\Admin\EventController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_event/update/{id}', [App\Http\Controllers\Admin\EventController::class, 'update'])->name('update_event');
+    Route::post('/Admin_event/aksi_update/{id}', [App\Http\Controllers\Admin\EventController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_event/aksi_delete/{id}', [App\Http\Controllers\Admin\EventController::class, 'aksi_delete'])->name('aksi_delete');
+    //Kuliner
+    Route::get('/Admin_kuliner', [App\Http\Controllers\Admin\KulinerController::class, 'index'])->name('kuliner');
+    Route::get('/Admin_kuliner/tambah', [App\Http\Controllers\Admin\KulinerController::class, 'tambah'])->name('tambah_kuliner');
+    Route::post('/Admin_kuliner/aksi_tambah', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_kuliner/update/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'update'])->name('update_kuliner');
+    Route::post('/Admin_kuliner/aksi_update/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_kuliner/aksi_delete/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_delete'])->name('aksi_delete');
+    //Akomodasi
+    Route::get('/Admin_akomodasi', [App\Http\Controllers\Admin\AkomodasiController::class, 'index'])->name('akomodasi');
+    Route::get('/Admin_akomodasi/tambah', [App\Http\Controllers\Admin\AkomodasiController::class, 'tambah'])->name('tambah_akomodasi');
+    Route::post('/Admin_akomodasi/aksi_tambah', [App\Http\Controllers\Admin\AkomodasiController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_akomodasi/update/{id}', [App\Http\Controllers\Admin\AkomodasiController::class, 'update'])->name('update_akomodasi');
+    Route::post('/Admin_akomodasi/aksi_update/{id}', [App\Http\Controllers\Admin\AkomodasiController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_akomodasi/aksi_delete/{id}', [App\Http\Controllers\Admin\AkomodasiController::class, 'aksi_delete'])->name('aksi_delete');
+    //Galeri
+    Route::get('/Admin_galeri', [App\Http\Controllers\Admin\GaleriController::class, 'index'])->name('galeri');
+    Route::get('/Admin_galeri/tambah', [App\Http\Controllers\Admin\GaleriController::class, 'tambah'])->name('tambah_galeri');
+    Route::post('/Admin_galeri/aksi_tambah', [App\Http\Controllers\Admin\GaleriController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_galeri/update/{id}', [App\Http\Controllers\Admin\GaleriController::class, 'update'])->name('update_galeri');
+    Route::post('/Admin_galeri/aksi_update/{id}', [App\Http\Controllers\Admin\GaleriController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_galeri/aksi_delete/{id}', [App\Http\Controllers\Admin\GaleriController::class, 'aksi_delete'])->name('aksi_delete');
+    //Testimoni
+    Route::get('/Admin_ulasan', [App\Http\Controllers\Admin\UlasanController::class, 'index'])->name('testimoni');
+    Route::post('/Admin_ulasan/aksi_tambah', [App\Http\Controllers\Admin\UlasanController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_ulasan/update/{id}', [App\Http\Controllers\Admin\UlasanController::class, 'update'])->name('update_testimoni');
+    Route::post('/Admin_ulasan/aksi_update/{id}', [App\Http\Controllers\Admin\UlasanController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_ulasan/aksi_delete/{id}', [App\Http\Controllers\Admin\UlasanController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses user

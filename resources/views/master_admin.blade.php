@@ -154,174 +154,40 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
                             </li>
                             <li class="nav-item  ">
-                                <a href="{{ url('Sadmin_beranda') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Admin_beranda') }}" class="nav-link nav-toggle">
                                     <i class="icon-home"></i>
                                     <span class="title">Beranda</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_event') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Admin_event') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Event</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_kuliner') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Admin_kuliner') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Kuliner</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_akomodasi') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Admin_akomodasi') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Akomodasi</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_tentangkami') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Admin_galeri') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
-                                    <span class="title">Tentang Kami</span>
-                                    <span class="arrow "></span>
+                                    <span class="title">Galeri</span>
                                 </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a href="javascript:;" class="nav-link nav-toggle">
-                                            <i class="icon-settings"></i> Item 1
-                                            <span class="arrow"></span>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="javascript:;" target="_blank" class="nav-link">
-                                                    <i class="icon-user"></i> Arrow Toggle
-                                                    <span class="arrow nav-toggle"></span>
-                                                </a>
-                                                <ul class="sub-menu">
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">
-                                                            <i class="icon-power"></i> Sample Link 1</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">
-                                                            <i class="icon-paper-plane"></i> Sample Link 1</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">
-                                                            <i class="icon-star"></i> Sample Link 1</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-camera"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-link"></i> Sample Link 2</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-pointer"></i> Sample Link 3</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="javascript:;" target="_blank" class="nav-link">
-                                            <i class="icon-globe"></i> Arrow Toggle
-                                            <span class="arrow nav-toggle"></span>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-tag"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-pencil"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-graph"></i> Sample Link 1</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-bar-chart"></i> Item 3 </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_ulasan') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Admin_ulasan') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Ulasan</span>
-                                    <span class="arrow "></span>
                                 </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a href="javascript:;" class="nav-link nav-toggle">
-                                            <i class="icon-settings"></i> Item 1
-                                            <span class="arrow"></span>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="javascript:;" target="_blank" class="nav-link">
-                                                    <i class="icon-user"></i> Arrow Toggle
-                                                    <span class="arrow nav-toggle"></span>
-                                                </a>
-                                                <ul class="sub-menu">
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">
-                                                            <i class="icon-power"></i> Sample Link 1</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">
-                                                            <i class="icon-paper-plane"></i> Sample Link 1</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#" class="nav-link">
-                                                            <i class="icon-star"></i> Sample Link 1</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-camera"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-link"></i> Sample Link 2</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-pointer"></i> Sample Link 3</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="javascript:;" target="_blank" class="nav-link">
-                                            <i class="icon-globe"></i> Arrow Toggle
-                                            <span class="arrow nav-toggle"></span>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-tag"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-pencil"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#" class="nav-link">
-                                                    <i class="icon-graph"></i> Sample Link 1</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="icon-bar-chart"></i> Item 3 </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                         <!-- END SIDEBAR MENU -->
@@ -351,9 +217,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- END CONTAINER -->
             <!-- BEGIN FOOTER -->
             <div class="page-footer">
-                <div class="page-footer-inner"> 2016 &copy; Metronic Theme By
-                    <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-                    <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+                <div class="page-footer-inner"> 2020 &copy; DoYouOne
                 </div>
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
