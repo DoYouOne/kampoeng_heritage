@@ -2,6 +2,6 @@
 
 @section ('content')
 
-
+ini event tampil
 
 @stop

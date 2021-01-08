@@ -121,8 +121,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
                                 <div class="hor-menu  ">
                                     <ul class="nav navbar-nav">
-                                        <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="javascript:;"> Dashboard
+                                        <li class="menu-dropdown classic-menu-dropdown active">
+                                            <a href="{{ url('/beranda') }}"> Beranda
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu pull-left">
@@ -145,7 +145,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown mega-menu-dropdown  ">
-                                            <a href="javascript:;"> UI Features
+                                            <a href="{{ url('/event') }}"> Event
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu" style="min-width: 710px">
@@ -262,8 +262,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-dropdown classic-menu-dropdown active">
-                                            <a href="javascript:;"> Layouts
+                                        <li class="menu-dropdown classic-menu-dropdown">
+                                            <a href="{{ url('/kuliner') }}"> Kuliner
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu pull-left">
@@ -291,7 +291,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown mega-menu-dropdown  mega-menu-full">
-                                            <a href="javascript:;"> Components
+                                            <a href="{{ url('/akomodasi') }}"> Akomodasi
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu" style="min-width: ">
@@ -395,7 +395,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="javascript:;"> More
+                                            <a href="{{ url('/tentang_kami') }}"> Tentang Kami
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu pull-left">
@@ -595,8 +595,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="javascript:;">
-                                                <i class="icon-briefcase"></i> Pages
+                                            <a href="{{ url('/testimoni') }}">
+                                                <i class="icon-briefcase"></i> Testimoni
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu pull-left">
@@ -946,9 +946,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- END PRE-FOOTER -->
                     <!-- BEGIN INNER FOOTER -->
                     <div class="page-footer">
-                        <div class="container"> 2016 &copy; Metronic Theme By
-                            <a target="_blank" href="http://keenthemes.com">Keenthemes</a> &nbsp;|&nbsp;
-                            <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+                        <div class="container"> 2020 &copy; DoYouOne
                         </div>
                     </div>
                     <div class="scroll-to-top">
