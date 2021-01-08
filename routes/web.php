@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/Sadmin_kuliner/tambah', [App\Http\Controllers\Sadmin\KulinerController::class, 'tambah'])->name('tambah_kuliner');
     Route::post('/Sadmin_kuliner/aksi_tambah', [App\Http\Controllers\Sadmin\KulinerController::class, 'aksi_tambah'])->name('aksi_tambah');
     Route::get('/Sadmin_kuliner/hapus/{id}', [App\Http\Controllers\Sadmin\KulinerController::class, 'hapus'])->name('hapus');
+    //Akomodasi
+    Route::get('/Sadmin_akomodasi', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'index'])->name('akomodasi');
 });
 
 //Hak akses admin
