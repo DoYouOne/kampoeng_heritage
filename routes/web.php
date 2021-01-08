@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/Sadmin_kuliner/aksi_delete/{id}', [App\Http\Controllers\Sadmin\KulinerController::class, 'aksi_delete'])->name('aksi_delete');
     //Akomodasi
     Route::get('/Sadmin_akomodasi', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'index'])->name('akomodasi');
+    Route::get('/Sadmin_akomodasi/tambah', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'tambah'])->name('tambah_akomodasi');
 });
 
 //Hak akses admin
