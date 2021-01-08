@@ -62,6 +62,12 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/Sadmin_hakakses/update/{id}', [App\Http\Controllers\Sadmin\HakaksesController::class, 'update'])->name('update_hakakses');
     Route::post('/Sadmin_hakakses/aksi_update/{id}', [App\Http\Controllers\Sadmin\HakaksesController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Sadmin_hakakses/aksi_delete/{id}', [App\Http\Controllers\Sadmin\HakaksesController::class, 'aksi_delete'])->name('aksi_delete');
+    //Testimoni
+    Route::get('/Sadmin_ulasan', [App\Http\Controllers\Sadmin\UlasanController::class, 'index'])->name('testimoni');
+    Route::post('/Sadmin_ulasan/aksi_tambah', [App\Http\Controllers\Sadmin\UlasanController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Sadmin_ulasan/update/{id}', [App\Http\Controllers\Sadmin\UlasanController::class, 'update'])->name('update_testimoni');
+    Route::post('/Sadmin_ulasan/aksi_update/{id}', [App\Http\Controllers\Sadmin\UlasanController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Sadmin_ulasan/aksi_delete/{id}', [App\Http\Controllers\Sadmin\UlasanController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses admin
