@@ -62,11 +62,11 @@
                             <td>{{ $k->alamat }}</td>
                             <td>{{ $k->telepon }}</td>
                             <td>
-                                <a href="{{ url('Sadmin_kuliner/edit') }}/{{ $k->id }}">
-                                    <button type="button" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $k->nama }} ?');">Edit</button>
+                                <a href="{{ url('Sadmin_kuliner/update') }}/{{ $k->id }}">
+                                    <button type="button" class="btn btn-warning">Edit</button>
                                 </a>
-                                <a href="{{ url('Sadmin_kuliner/hapus') }}/{{ $k->id }}">
-                                    <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $k->nama }} ?');">Hapus</button>
+                                <a href="{{ url('Sadmin_kuliner/aksi_delete') }}/{{ $k->id }}">
+                                    <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus {{ $k->nama }} ?');">Hapus</button>
                                 </a>
                             </td>
                         </tr>
