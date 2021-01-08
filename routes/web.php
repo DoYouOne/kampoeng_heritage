@@ -80,6 +80,13 @@ Route::group(['middleware' => ['auth','CheckRole:1']], function(){
     Route::get('/Admin_event/update/{id}', [App\Http\Controllers\Admin\EventController::class, 'update'])->name('update_event');
     Route::post('/Admin_event/aksi_update/{id}', [App\Http\Controllers\Admin\EventController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Admin_event/aksi_delete/{id}', [App\Http\Controllers\Admin\EventController::class, 'aksi_delete'])->name('aksi_delete');
+    //Kuliner
+    Route::get('/Admin_kuliner', [App\Http\Controllers\Admin\KulinerController::class, 'index'])->name('kuliner');
+    Route::get('/Admin_kuliner/tambah', [App\Http\Controllers\Admin\KulinerController::class, 'tambah'])->name('tambah_kuliner');
+    Route::post('/Admin_kuliner/aksi_tambah', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_kuliner/update/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'update'])->name('update_kuliner');
+    Route::post('/Admin_kuliner/aksi_update/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_kuliner/aksi_delete/{id}', [App\Http\Controllers\Admin\KulinerController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses user
