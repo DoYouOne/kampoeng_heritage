@@ -2,6 +2,6 @@
 
 @section ('content')
 
-
+ini kuliner tampil
 
 @stop

@@ -2,6 +2,6 @@
 
 @section ('content')
 
-
+ini tentang kami tampil
 
 @stop

@@ -28,9 +28,10 @@ class AuthController extends Controller
             } else if($role->status == '1'){ //Admin
                 return redirect('/Admin_beranda');
             } else if($role->status == '2'){ //User
-                return redirect('/User_beranda');
+                return redirect('/beranda');
             }
         } else{
+            
             return redirect('/login');
         }
     }

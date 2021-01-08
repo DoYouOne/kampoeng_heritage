@@ -57,13 +57,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-9">
-                            <img src="{{ url('uploads/event') }}/{{ $event->foto }}" alt="..." class="img-thumbnail" style="width: 240px;">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="col-md-3 control-label">Foto</label>
                         <div class="col-md-9">
+                            <img src="{{ url('uploads/event') }}/{{ $event->foto }}" alt="..." class="img-thumbnail" style="width: 240px;">
                             <input type="file" class="form-control" name="gambar">
                             <script>document.foo.submit();</script>
                             <small style="color: grey;">*Harap masukkan foto makanan atau tempat</small>
@@ -73,7 +69,7 @@
                 <div class="form-actions">
                     <div class="row">
                         <div class="col-md-offset-3 col-md-9">
-                            <button type="submit" class="btn green">Submit</button>
+                            <button type="submit" name="submit" class="btn green">Submit</button>
                             <button type="reset" class="btn default">Cancel</button>
                         </div>
                     </div>
