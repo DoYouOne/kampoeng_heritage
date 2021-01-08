@@ -34,36 +34,32 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-primary">
-              <h2 class="card-title" align="center">Data Akomodasi</h2>
+              <h2 class="card-title" align="center">Data Galeri</h2>
             </div>
             <div class="card-body">
-                <a href="{{ url('Admin_akomodasi/tambah') }}"><button class="btn btn-primary">Tambah Akomodasi</button></a>
+                <a href="{{ url('Admin_galeri/tambah') }}"><button class="btn btn-primary">Tambah Galeri</button></a>
                 <br><br><br>
               <div class="table-responsive">
                 <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
                     <thead>
                         <th>No</th>
-                        <th>Nama Akomodasi</th>
                         <th>Foto</th>
-                        <th>Harga mulai</th>
-                        <th>Alamat</th>
+                        <th>Keterangan</th>
                         <th>Aksi</th>
                     </thead>
                     <tbody>
                         @php $no = 1; @endphp
-                        @foreach ($akomodasi as $e)
+                        @foreach ($galeri as $e)
                         <tr>
                             <td>{{ $no  }}</td>
-                            <td>{{ $e->nama }}</td>
-                            <td><img src="{{ url('uploads/akomodasi') }}/{{ $e->foto }}" style="width: 50px; height: 50px;" alt=""></td>
-                            <td>{{ $e->harga }}</td>
-                            <td>{{ $e->alamat }}</td>
+                            <td><img src="{{ url('uploads/galeri') }}/{{ $e->foto }}" style="width: 50px; height: 50px;" alt=""></td>
+                            <td>{{ $e->keterangan }}</td>
                             <td>
-                                <a href="{{ url('Admin_akomodasi/update') }}/{{ $e->id }}">
+                                <a href="{{ url('Admin_galeri/update') }}/{{ $e->id }}">
                                     <button type="button" class="btn btn-warning">Edit</button>
                                 </a>
-                                <a href="{{ url('Admin_akomodasi/aksi_delete') }}/{{ $e->id }}">
-                                    <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus {{ $e->nama }} ?');">Hapus</button>
+                                <a href="{{ url('Admin_galeri/aksi_delete') }}/{{ $e->id }}">
+                                    <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');">Hapus</button>
                                 </a>
                             </td>
                         </tr>
