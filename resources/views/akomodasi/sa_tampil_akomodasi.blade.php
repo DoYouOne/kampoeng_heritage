@@ -50,27 +50,25 @@
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        {{--  @php $no = 1; @endphp
-                        @foreach ($event as $e)
+                        @php $no = 1; @endphp
+                        @foreach ($akomodasi as $e)
                         <tr>
                             <td>{{ $no  }}</td>
-                            <td>{{ $e->foto }}</td>
-                            <td>{{ $e->judul }}</td>
-                            <td>{{ $e->waktu }}</td>
-                            <td>{{ $e->jam }}</td>
-                            <td>{{ $e->penyelenggara }}</td>
-                            <td>{{ $e->deskripsi }}</td>
+                            <td>{{ $e->nama }}</td>
+                            <td><img src="{{ url('uploads/akomodasi') }}/{{ $e->foto }}" style="width: 50px; height: 50px;" alt=""></td>
+                            <td>{{ $e->harga }}</td>
+                            <td>{{ $e->alamat }}</td>
                             <td>
-                                <a href="{{ url('#') }}/{{ $e->id }}">
-                                    <button class="btn btn-primary" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $e->no }} ?');">Edit</button>
+                                <a href="{{ url('Sadmin_akomodasi/update') }}/{{ $e->id }}">
+                                    <button type="button" class="btn btn-warning">Edit</button>
                                 </a>
-                                <a href="{{ url('/Sadmin_event/aksi_delete') }}/{{ $e->id }}">
-                                    <button class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $e->no }} ?');">Hapus</button>
+                                <a href="{{ url('Sadmin_akomodasi/aksi_delete') }}/{{ $e->id }}">
+                                    <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus {{ $e->nama }} ?');">Hapus</button>
                                 </a>
                             </td>
                         </tr>
                         @php $no++; @endphp
-                        @endforeach  --}}
+                        @endforeach
                     </tbody>
                 </table>
               </div>

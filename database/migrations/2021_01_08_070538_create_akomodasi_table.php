@@ -16,9 +16,10 @@ class CreateAkomodasiTable extends Migration
         Schema::create('akomodasi', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('alamat');
             $table->string('foto');
+            $table->string('alamat');
             $table->integer('harga');
+            $table->string('telepon');
             $table->timestamps();
         });
     }

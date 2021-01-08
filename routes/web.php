@@ -45,6 +45,10 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     //Akomodasi
     Route::get('/Sadmin_akomodasi', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'index'])->name('akomodasi');
     Route::get('/Sadmin_akomodasi/tambah', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'tambah'])->name('tambah_akomodasi');
+    Route::post('/Sadmin_akomodasi/aksi_tambah', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Sadmin_akomodasi/update/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'update'])->name('update_kuliner');
+    Route::post('/Sadmin_akomodasi/aksi_update/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Sadmin_akomodasi/aksi_delete/{id}', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses admin
