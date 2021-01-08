@@ -101,6 +101,12 @@ Route::group(['middleware' => ['auth','CheckRole:1']], function(){
     Route::get('/Admin_galeri/update/{id}', [App\Http\Controllers\Admin\GaleriController::class, 'update'])->name('update_galeri');
     Route::post('/Admin_galeri/aksi_update/{id}', [App\Http\Controllers\Admin\GaleriController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Admin_galeri/aksi_delete/{id}', [App\Http\Controllers\Admin\GaleriController::class, 'aksi_delete'])->name('aksi_delete');
+    //Testimoni
+    Route::get('/Admin_ulasan', [App\Http\Controllers\Admin\UlasanController::class, 'index'])->name('testimoni');
+    Route::post('/Admin_ulasan/aksi_tambah', [App\Http\Controllers\Admin\UlasanController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Admin_ulasan/update/{id}', [App\Http\Controllers\Admin\UlasanController::class, 'update'])->name('update_testimoni');
+    Route::post('/Admin_ulasan/aksi_update/{id}', [App\Http\Controllers\Admin\UlasanController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/Admin_ulasan/aksi_delete/{id}', [App\Http\Controllers\Admin\UlasanController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses user
