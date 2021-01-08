@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class BerandaController extends Controller
 {
     public function index(){
-        return view('beranda.beranda_admin');
+        return view('beranda.beranda_user');
     }
 }

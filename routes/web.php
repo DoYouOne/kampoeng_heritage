@@ -48,4 +48,9 @@ Route::group(['middleware' => ['auth','CheckRole:1']], function(){
     Route::get('/Admin_beranda', [App\Http\Controllers\Admin\BerandaController::class, 'index'])->name('beranda');
 });
 
+//Hak akses user
+Route::group(['middleware' => ['auth','CheckRole:2']], function(){
+    Route::get('/User_beranda', [App\Http\Controllers\User\BerandaController::class, 'index'])->name('beranda');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
