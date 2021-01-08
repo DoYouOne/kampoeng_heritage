@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Storage;
 class EventController extends Controller
 {
     public function index(){
-        
+
         $event['event'] = \App\Models\Event::all();
 
         return view('event.sa_tampil_event', $event);
@@ -23,7 +23,7 @@ class EventController extends Controller
     }
 
     public function aksi_tambah(Request $request){
-         
+
         $filetype = '|file|image|mimes:jpeg,png,jpg|max:2048';
         $filename = $request->file('gambar');
         $nama_file = time()."_".$filename->getClientOriginalName();
@@ -56,25 +56,38 @@ class EventController extends Controller
     }
 
     public function aksi_update(Request $request, $id){
-        $gambar = Event::select('foto')->where('id', $id)->first();
-        File::delete(public_path('/uploads/event/').$gambar->foto);
+        $cek = $request->gambar;
+        if($cek != null){
+            $gambar = Event::select('foto')->where('id', $id)->first();
+            File::delete(public_path('/uploads/event/').$gambar->foto);
 
-        $filetype = '|file|image|mimes:jpeg,png,jpg|max:2048';
-        $filename = $request->file('gambar');
-        $nama_file = time()."_".$filename->getClientOriginalName();
-        $fileloc   = '../public/uploads/event/';
-        $filename->move($fileloc,$nama_file);
+            $filetype = '|file|image|mimes:jpeg,png,jpg|max:2048';
+            $filename = $request->file('gambar');
+            $nama_file = time()."_".$filename->getClientOriginalName();
+            $fileloc   = '../public/uploads/event/';
+            $filename->move($fileloc,$nama_file);
 
+            $edit = DB::table('event')->where('id', $id)->update([
+                'judul'         => $request->judul,
+                'deskripsi'     => $request->deskripsi,
+                'penyelenggara' => $request->penyelenggara,
+                'waktu'         => $request->waktu,
+                'jam'           => $request->jam,
+                'foto'          => $nama_file
+            ]);
+
+            return redirect('Sadmin_event');
+        }
+        //Edit data tanpa foto
         $edit = DB::table('event')->where('id', $id)->update([
             'judul'         => $request->judul,
             'deskripsi'     => $request->deskripsi,
             'penyelenggara' => $request->penyelenggara,
             'waktu'         => $request->waktu,
-            'jam'           => $request->jam,
-            'foto'          => $nama_file
+            'jam'           => $request->jam
         ]);
-
         return redirect('Sadmin_event');
+
     }
 
 }

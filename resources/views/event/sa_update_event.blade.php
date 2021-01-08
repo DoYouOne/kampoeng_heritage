@@ -30,13 +30,13 @@
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="judul" value="{{ $event->judul }}">
                         </div>
-                    </div> 
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Penyelenggara</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="penyelenggara" value="{{ $event->penyelenggara }}">
                         </div>
-                    </div>            
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Tanggal</label>
                         <div class="col-md-9">
@@ -56,7 +56,7 @@
                             <textarea class="form-control" name="deskripsi" rows="3">{{ $event->deskripsi }}</textarea>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-">
                         <label class="col-md-3 control-label">Foto</label>
                         <div class="col-md-9">
                             <img src="{{ url('uploads/event') }}/{{ $event->foto }}" alt="..." class="img-thumbnail" style="width: 240px;">
