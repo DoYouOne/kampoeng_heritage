@@ -178,7 +178,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_tentangkami') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_galeri') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Galery</span>
                                 </a>
@@ -193,7 +193,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <h3 class="uppercase">Hak Akses</h3>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('Sadmin_ulasan') }}" class="nav-link nav-toggle">
+                                <a href="{{ url('Sadmin_hakakses') }}" class="nav-link nav-toggle">
                                     <i class="icon-folder"></i>
                                     <span class="title">Hak Akses</span>
                                 </a>

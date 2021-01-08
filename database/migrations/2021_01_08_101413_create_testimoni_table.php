@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAkomodasiTable extends Migration
+class CreateTestimoniTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateAkomodasiTable extends Migration
      */
     public function up()
     {
-        Schema::create('akomodasi', function (Blueprint $table) {
+        Schema::create('testimoni', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('alamat');
-            $table->string('foto');
-            $table->integer('harga');
+            $table->string('id_user');
+            $table->string('ulasan');
+            $table->timestamp('tanggal');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateAkomodasiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('akomodasi');
+        Schema::dropIfExists('testimoni');
     }
 }
