@@ -33,6 +33,14 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::post('/Sadmin_event/aksi_update/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Sadmin_event/aksi_delete/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_delete'])->name('aksi_delete');
 
+    Route::get('/Sadmin_event/aksi_update/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_update'])->name('aksi_update');
+    //Kuliner
+    Route::get('/Sadmin_kuliner', [App\Http\Controllers\Sadmin\KulinerController::class, 'index'])->name('kuliner');
+    Route::get('/Sadmin_kuliner/tambah', [App\Http\Controllers\Sadmin\KulinerController::class, 'tambah'])->name('tambah_kuliner');
+    Route::post('/Sadmin_kuliner/aksi_tambah', [App\Http\Controllers\Sadmin\KulinerController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Sadmin_kuliner/hapus/{id}', [App\Http\Controllers\Sadmin\KulinerController::class, 'hapus'])->name('hapus');
+    //Akomodasi
+    Route::get('/Sadmin_akomodasi', [App\Http\Controllers\Sadmin\AkomodasiController::class, 'index'])->name('akomodasi');
 });
 
 //Hak akses admin
