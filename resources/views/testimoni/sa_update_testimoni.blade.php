@@ -9,46 +9,15 @@
             </div>
         </div>
         <div class="portlet-body form">
-            <form class="form-horizontal" role="form" action="{{ url('Sadmin_hakakses/aksi_update/'.$hakakses->id) }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" role="form" action="{{ url('Sadmin_ulasan/aksi_update/'.$testimoni->id) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-body">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <label class="col-md-3 control-label">Username</label>
+                                <label class="col-md-3 control-label">Ulasan</label>
                                 <div class="col-md-9">
-                                    <input type="name" class="form-control" name="name" value="{{ $hakakses->name }}"> </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">Email</label>
-                                <div class="col-md-9">
-                                    <input type="email" class="form-control" name="email"  value="{{ $hakakses->email }}"> </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">Password</label>
-                                <div class="col-md-9">
-                                    <input type="password" class="form-control" name="password" value="{{ $hakakses->password }}">  </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3 control-label">Status</label>
-                                <div class="col-md-9">
-                                    <select name="status" class="form-control">
-                                        <option value="{{ $hakakses->status }}" readonly>
-                                            @if ($hakakses->status == 0)
-                                                Super Admin
-                                            @elseif ($hakakses->status == 1)
-                                                Admin
-                                                @elseif ($hakakses->status == 2)
-                                                User
-                                            @endif
-                                        </option>
-                                        <option value="" disabled>--Pilih salah satu--</option>
-                                        <option value="1">Admin</option>
-                                        <option value="2">User</option>
-                                    </select>
-                                </div>
+                                    <input type="text" class="form-control" name="ulasan" value="{{ $testimoni->ulasan }}"> </div>
                             </div>
                         </div>
                     </div>
