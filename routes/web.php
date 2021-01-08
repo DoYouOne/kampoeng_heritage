@@ -29,7 +29,10 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/Sadmin_event', [App\Http\Controllers\Sadmin\EventController::class, 'index'])->name('event');
     Route::get('/Sadmin_event/tambah', [App\Http\Controllers\Sadmin\EventController::class, 'tambah'])->name('tambah_event');
     Route::post('/Sadmin_event/aksi_tambah', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/Sadmin_event/update/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'update'])->name('update_event');
+    Route::post('/Sadmin_event/aksi_update/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_update'])->name('aksi_update');
     Route::get('/Sadmin_event/aksi_delete/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_delete'])->name('aksi_delete');
+
     Route::get('/Sadmin_event/aksi_update/{id}', [App\Http\Controllers\Sadmin\EventController::class, 'aksi_update'])->name('aksi_update');
     //Kuliner
     Route::get('/Sadmin_kuliner', [App\Http\Controllers\Sadmin\KulinerController::class, 'index'])->name('kuliner');
