@@ -1,41 +1,28 @@
 @extends('master_user')
 
 @section ('content')
+<div class="col-md-12">
+    <div class="portlet light ">
+            <h2 align="center">Wisata Kampoeng Heritage Malang</h2>
+        <div class="portlet-body">
+            <p>Malang penuh sejarah. Dari jejak kerajaan kuno abad ke 8 masehi sampai era kolonial Belanda. Kekayaan warisan sejarah itu memunculkan berbagai kawasan Malang heritage. Tidak sedikit yang kemudian dikelola jadi tujuan wisata.
 
-<section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
-    </div>
-  </section>
+                Salah satu tujuan wisata Malang heritage itu adalah Kampoeng Heritage Kajoetangan atau Kampung Kayutangan. Sebuah kampung yang sudah tercatat dalam sejarah masa klasik sampai modern. Kampung ini memiliki ciri khas deretan rumah berarsitektur kolonial Belanda.
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        {{-- @foreach ($collection as $item) --}}
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+                Ada 60 rumah tua yang berhasil diidentifikasi di kampung ini. Seluruhnya relatif terjaga bentuk aslinya. Di depan rumah dipasang plakat informasi usia bangunan sampai pemilik pertamanya. Rumah tertua dicatat dibangun pada 1870.</p>
+            <h4>1. Rute dan Tiket Masuk</h4>
+            <p>Lokasi dan rute Kampung Heritage Kayoetangan
+                Lokasi : Jl. Jend. Basuki Rahmat Gg. VI, Kauman, Kecamatan Klojen, Kota Malang
+
+                Harga Tiket Rp. 5.000
+                Parkir Rp. 2.000
+                Jam Buka : 07.00 - 19.00</p>
+            <h4>2. Terdapat 30 spot foto</h4>
+            <h4>3. Rumah Tua dan Dinding Mural jadi Primadona</h4>
+            <h4>4. Perjalanan menuju pintu keluar dipenuhi mural dinding yang estetik</h4>
+            <h4>5. Rumah Foto dan Barang Antik</h4>
         </div>
-        {{-- @endforeach --}}
-      </div>
     </div>
-  </div>
-</main>
+</div>
 
 @stop

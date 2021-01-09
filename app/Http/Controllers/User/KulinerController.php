@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class KulinerController extends Controller
 {
     public function index(){
-        return view('kuliner.u_tampil_kuliner');
+        $data['kuliner'] = \App\Models\Kuliner::all();
+        return view('kuliner.u_tampil_kuliner', $data);
     }
 }

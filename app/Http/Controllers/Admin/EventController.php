@@ -38,7 +38,7 @@ class EventController extends Controller
             'foto'          => $nama_file
         ]);
 
-        return redirect('/admin_event');
+        return redirect('/Admin_event');
     }
 
     public function aksi_delete($id){
