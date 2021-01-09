@@ -7,7 +7,7 @@
         <div class="portlet light portlet-fit ">
             <div class="portlet-body">
                 <h2 align="center">Ulasan</h2>
-                <a href="{{ url('tambah_testimoni') }}"><button class="btn btn-primary btn-sm">Tulis Ulasan</button></a>
+                    <a href="{{ url('tambah_testimoni') }}"><button class="btn btn-primary btn-sm">Tulis Ulasan</button></a>
                 <br><br>
                 <div class="timeline">
                     <!-- TIMELINE ITEM -->
