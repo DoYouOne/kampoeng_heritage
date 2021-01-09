@@ -54,7 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="page-header-inner ">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
-                        <a href="index.html">
+                        <a href="">
                             <img src="{{ URL::asset ('assets/kampoengheritage.png')}}" style="width:140px;" alt="logo" class="logo-default" /> </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
@@ -138,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
                                 <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
                                 <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-                                <form class="sidebar-search  sidebar-search-bordered" action="page_general_search_3.html" method="POST">
+                                <form class="sidebar-search  sidebar-search-bordered" action="">
                                     <a href="javascript:;" class="remove">
                                         <i class="icon-close"></i>
                                     </a>

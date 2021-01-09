@@ -59,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="container">
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
-                                    <a href="index.html">
+                                    <a href="">
                                         <img src="{{ URL::asset ('assets/kampoengheritage.png')}}" style="width:240px;" alt="logo" class="logo-default">
                                     </a>
                                 </div>
@@ -114,7 +114,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="page-header-menu">
                             <div class="container">
                                 <!-- BEGIN HEADER SEARCH BOX -->
-                                <form class="search-form" action="page_general_search.html" method="GET">
+                                <form class="search-form" action="#">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Search" name="query">
                                         <span class="input-group-btn">
