@@ -4,7 +4,7 @@
 <div class="col-md-12">
     <br>
     <div class="portlet light ">
-            <img src="{{ url('assets/header.jpeg') }}" alt="" class="img-responsive" style="width:100%">
+            <img src="{{ url('assets/headerkh.jpg') }}" alt="" class="img-responsive" style="width:100%">
             <h2 align="center">Wisata Kampoeng Heritage Malang</h2>
         <div class="portlet-body">
             <p>&emsp; Malang penuh sejarah. Dari jejak kerajaan kuno abad ke 8 masehi sampai era kolonial Belanda. Kekayaan warisan sejarah itu memunculkan berbagai kawasan Malang heritage. Tidak sedikit yang kemudian dikelola jadi tujuan wisata.

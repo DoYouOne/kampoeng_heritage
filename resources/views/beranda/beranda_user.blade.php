@@ -22,7 +22,7 @@
           </div>
 
           <div class="item">
-            <img src="../uploads/beranda/header3.jpg" style="width: 100%;height: 720px;" alt="New York">
+            <img src="../uploads/beranda/header3.jpeg" style="width: 100%;height: 720px;" alt="New York">
           </div>
         </div>
 

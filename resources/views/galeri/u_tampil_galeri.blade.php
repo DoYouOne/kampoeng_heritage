@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mt-overlay-2">
-                                    <img src="{{ url('uploads/galeri') }}/{{ $e->foto }}" />
+                                    <img src="{{ url('uploads/galeri') }}/{{ $e->foto }}" style="height:240px; width:auto" />
                                 </div>
                             </div>
                         </div>

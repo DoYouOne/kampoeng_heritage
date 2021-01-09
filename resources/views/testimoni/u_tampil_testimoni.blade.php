@@ -30,17 +30,20 @@
                                     <span class="font-grey-cascade"> {{ $t->ulasan }}
                                     </span>
                                 </div>
-                                <div class="timeline-body-content">
-                                    <i class="icon-note font-dark"></i>
-                                    <a href="{{ '/aksi_update_testimoni/update' }}/{{ $t->id_testi }}">
-                                    <span class="font-black-cascade"> edit </span>
-                                    </a>                                
-                                    &MediumSpace;
-                                    <i class="icon-trash font-dark"></i>
-                                    <a href="{{ '/aksi_delete_testimoni/aksi_delete' }}/{{ $t->id_testi }}">
-                                        <span class="font-black-cascade"> hapus </span>
-                                    </a>
-                                </div>
+                                {{-- @php $cek=Auth::user()->id; @endphp
+                                  @if ($t->id_user == $cek) --}}
+                                    <div class="timeline-body-content">
+                                        <i class="icon-note font-dark"></i>
+                                        <a href="{{ '/aksi_update_testimoni/update' }}/{{ $t->id_testi }}">
+                                        <span class="font-black-cascade"> edit </span>
+                                        </a>
+                                        &MediumSpace;
+                                        <i class="icon-trash font-dark"></i>
+                                        <a href="{{ '/aksi_delete_testimoni/aksi_delete' }}/{{ $t->id_testi }}">
+                                            <span class="font-black-cascade"> hapus </span>
+                                        </a>
+                                    </div>
+                                {{-- @endif --}}
                             </div>
                         </div>
                         @endforeach
