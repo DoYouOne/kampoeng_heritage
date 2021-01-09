@@ -116,9 +116,6 @@ License: You must have a valid license purchased only from themeforest(the above
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                    <div class="form-group">
-                    <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
-                    <input class="form-control placeholder-no-fix" type="password" id="password-confirm" autocomplete="off" placeholder="Re-type Your Password" name="password_confirmation" /> </div>
                     <div class="form-group margin-top-20 margin-bottom-20">
                     <label class="mt-checkbox mt-checkbox-outline">
                         <input type="checkbox" name="tnc" /> I agree to the
