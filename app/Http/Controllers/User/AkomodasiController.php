@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class AkomodasiController extends Controller
 {
     public function index(){
-        return view('akomodasi.u_tampil_akomodasi');
+        $data['akomodasi'] = \App\Models\Akomodasi::all();
+        return view('akomodasi.u_tampil_akomodasi', $data);
     }
 }

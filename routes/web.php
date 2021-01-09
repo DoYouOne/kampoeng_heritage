@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/beranda');
 });
 
 Auth::routes(['verify' => true]);
@@ -123,8 +123,10 @@ Route::group(['middleware' => ['auth','CheckRole:2']], function(){
 Route::prefix('/')->group(function(){
     Route::get('beranda', [App\Http\Controllers\User\BerandaController::class, 'index'])->name('beranda');
     Route::get('event', [App\Http\Controllers\User\EventController::class, 'index'])->name('event');
+    Route::get('/detail_event/{id}', [App\Http\Controllers\User\EventController::class, 'detail_event'])->name('detail_event');
     Route::get('kuliner', [App\Http\Controllers\User\KulinerController::class, 'index'])->name('kulner');
     Route::get('akomodasi', [App\Http\Controllers\User\AkomodasiController::class, 'index'])->name('akomodasi');
+    Route::get('galeri', [App\Http\Controllers\User\GaleriController::class, 'index'])->name('galeri');
     Route::get('tentang_kami', [App\Http\Controllers\User\Tentang_kamiController::class, 'index'])->name('tentang_kami');
     Route::get('testimoni', [App\Http\Controllers\User\TestimoniController::class, 'index'])->name('testimoni');
 });
