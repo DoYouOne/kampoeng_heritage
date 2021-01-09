@@ -22,10 +22,32 @@ class TestimoniController extends Controller
     }
 
     public function aksi_tambah(Request $request){
-        \App\Models\Testimoni::create([
+        Testimoni::create([
             'id_user'      => $request->id_user,
             'ulasan'       => $request->ulasan
         ]);
+        return redirect('testimoni');
+    }
+
+    public function update($id){
+        $testimoni['testimoni'] = DB::table('testimoni')
+                                    ->select('*')
+                                    ->where('id_testi', '=', $id)
+                                    ->first();
+        return view('testimoni.u_update_testimoni', $testimoni);
+    }
+
+    public function aksi_update(Request $request, $id){
+        $edit = DB::table('testimoni')->where('id_testi', $id)->update([
+            'ulasan'         => $request->ulasan
+        ]);
+        return redirect('testimoni');
+
+    }
+
+    public function aksi_delete($id){
+        DB::table('testimoni')->where('id_testi',$id)->delete();
+
         return redirect('testimoni');
     }
 }

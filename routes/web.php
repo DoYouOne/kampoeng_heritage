@@ -118,6 +118,9 @@ Route::group(['middleware' => ['auth','CheckRole:2']], function(){
     // Route::get('/tentang_kami', [App\Http\Controllers\User\BerandaController::class, 'tentang_kami'])->name('tentang_kami');
     Route::get('/tambah_testimoni', [App\Http\Controllers\User\TestimoniController::class, 'tambah_testimoni'])->name('tambah_testimoni');
     Route::post('/aksi_tambah_testimoni', [App\Http\Controllers\User\TestimoniController::class, 'aksi_tambah'])->name('aksi_tambah');
+    Route::get('/aksi_update_testimoni/update/{id}', [App\Http\Controllers\User\TestimoniController::class, 'update'])->name('update');
+    Route::post('/aksi_update_testimoni/aksi_update/{id}', [App\Http\Controllers\User\TestimoniController::class, 'aksi_update'])->name('aksi_update');
+    Route::get('/aksi_delete_testimoni/aksi_delete/{id}', [App\Http\Controllers\User\TestimoniController::class, 'aksi_delete'])->name('aksi_delete');
 });
 
 //Hak akses all user/non user
