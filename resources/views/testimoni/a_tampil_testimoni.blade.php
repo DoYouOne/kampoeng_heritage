@@ -88,10 +88,10 @@
                             <td>{{ $k->ulasan }}</td>
                             <td>{{ $k->tanggal }}</td>
                             <td>
-                                <a href="{{ url('Admin_ulasan/update') }}/{{ $k->id }}">
+                                <a href="{{ url('Admin_ulasan/update') }}/{{ $k->id_testi }}">
                                     <button type="button" class="btn btn-warning">Edit</button>
                                 </a>
-                                <a href="{{ url('Admin_ulasan/aksi_delete') }}/{{ $k->id }}">
+                                <a href="{{ url('Admin_ulasan/aksi_delete') }}/{{ $k->id_testi }}">
                                     <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus {{ $k->name }} ?');">Hapus</button>
                                 </a>
                             </td>

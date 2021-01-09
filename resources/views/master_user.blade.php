@@ -58,7 +58,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
                                     <a href="index.html">
-                                        <img src="{{ URL::asset ('assets/layouts/layout3/img/logo-default.jpg')}}" alt="logo" class="logo-default">
+                                        <img src="{{ URL::asset ('assets/kampoengheritage.png')}}" style="width:240px;" alt="logo" class="logo-default">
                                     </a>
                                 </div>
                                 <!-- END LOGO -->

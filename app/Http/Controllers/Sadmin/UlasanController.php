@@ -25,12 +25,16 @@ class UlasanController extends Controller
     }
 
     public function update($id){
-        $testimoni['testimoni'] = \App\Models\Testimoni::find($id);
+        $testimoni['testimoni'] = DB::table('testimoni')
+                                    ->select('*')
+                                    ->where('id_testi', '=', $id)
+                                    ->first();
+        // $testimoni['testimoni'] = \App\Models\Testimoni::find($id);
         return view('testimoni.sa_update_testimoni', $testimoni);
     }
 
     public function aksi_update(Request $request, $id){
-        $edit = DB::table('testimoni')->where('id', $id)->update([
+        $edit = DB::table('testimoni')->where('id_testi', $id)->update([
             'ulasan'         => $request->ulasan
         ]);
         return redirect('Sadmin_ulasan');
@@ -38,7 +42,7 @@ class UlasanController extends Controller
     }
 
     function aksi_delete($id){
-        \App\Models\Testimoni::where('id', $id)->delete();
+        \App\Models\Testimoni::where('id_testi', $id)->delete();
         return redirect('/Sadmin_ulasan');
     }
 }

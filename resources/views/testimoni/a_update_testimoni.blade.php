@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="portlet-body form">
-            <form class="form-horizontal" role="form" action="{{ url('Admin_ulasan/aksi_update/'.$testimoni->id) }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" role="form" action="{{ url('Admin_ulasan/aksi_update/'.$testimoni->id_testi) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-body">
                     <div class="row">
