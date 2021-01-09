@@ -51,6 +51,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END HEAD -->
 
     <body class=" login">
+        @include('sweetalert::alert')
+        @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="index.html">
@@ -116,18 +118,6 @@ License: You must have a valid license purchased only from themeforest(the above
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-                    <div class="form-group">
-                    <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
-                    <input id="password-confirm" type="password" class="form-control" placeholder="Konfirmasi Password" name="password_confirmation" required autocomplete="new-password"> </div>
-                    <div class="form-group margin-top-20 margin-bottom-20">
-                    <label class="mt-checkbox mt-checkbox-outline">
-                        <input type="checkbox" name="tnc" /> I agree to the
-                        <a href="javascript:;">Terms of Service </a> &
-                        <a href="javascript:;">Privacy Policy </a>
-                        <span></span>
-                    </label>
-                    <div id="register_tnc_error"> </div>
-                </div>
                 <div class="form-actions">
                     <button type="button" id="register-back-btn" class="btn green btn-outline">Back</button>
                     <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">Submit</button>
