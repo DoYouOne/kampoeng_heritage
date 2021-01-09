@@ -70,5 +70,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'status'   => '2'
         ]);
+
+        return view('/beranda');
     }
 }
