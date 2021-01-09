@@ -5,13 +5,10 @@
 <div class="row">
     <div class="col-md-12">
         <div class="portlet light portlet-fit ">
-            <div class="portlet-title">
-                <div class="caption">
-                    <i class="icon-microphone font-green"></i>
-                    <span class="caption-subject bold font-green uppercase"> Semua Ulasan</span>
-                </div>
-            </div>
             <div class="portlet-body">
+                <h2 align="center">Ulasan</h2>
+                <a href="{{ url('tambah_testimoni') }}"><button class="btn btn-primary btn-sm">Tulis Ulasan</button></a>
+                <br><br>
                 <div class="timeline">
                     <!-- TIMELINE ITEM -->
                         @foreach ($testimoni as $t)
@@ -25,7 +22,7 @@
                                 <div class="timeline-body-arrow"> </div>
                                 <div class="timeline-body-head">
                                     <div class="timeline-body-head-caption">
-                                        <span class="timeline-body-alerttitle font-red-intense">{{ $t->id_user }}</span>
+                                        <span class="timeline-body-alerttitle font-red-intense">{{ $t->name }}</span>
                                         <span class="timeline-body-time font-grey-cascade">{{ $t->tanggal }}</span>
                                     </div>
                                 </div>
