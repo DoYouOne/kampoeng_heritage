@@ -1,41 +1,46 @@
 @extends('master_user')
 
 @section ('content')
-
-<section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Album example</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        {{-- @foreach ($collection as $item) --}}
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light portlet-fit ">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-microphone font-green"></i>
+                    <span class="caption-subject bold font-green uppercase"> Semua Ulasan</span>
                 </div>
-                <small class="text-muted">9 mins</small>
-              </div>
             </div>
-          </div>
+            <div class="portlet-body">
+                <div class="timeline">
+                    <!-- TIMELINE ITEM -->
+                        @foreach ($testimoni as $t)
+                        <div class="timeline-item">
+                            <div class="timeline-badge">
+                                <div class="timeline-icon">
+                                    <i class="icon-user-following font-green-haze"></i>
+                                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <div class="timeline-body-arrow"> </div>
+                                <div class="timeline-body-head">
+                                    <div class="timeline-body-head-caption">
+                                        <span class="timeline-body-alerttitle font-red-intense">{{ $t->id_user }}</span>
+                                        <span class="timeline-body-time font-grey-cascade">{{ $t->tanggal }}</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-body-content">
+                                    <span class="font-grey-cascade"> {{ $t->ulasan }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    <!-- END TIMELINE ITEM -->
+                </div>
+            </div>
         </div>
-        {{-- @endforeach --}}
-      </div>
     </div>
-  </div>
-</main>
+</div>
 
 @stop
