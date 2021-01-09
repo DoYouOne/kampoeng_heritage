@@ -56,7 +56,7 @@
                         @foreach ($event as $e)
                         <tr>
                             <td>{{ $no  }}</td>
-                            <td>{{ $e->foto }}</td>
+                            <td><img src="{{ url('uploads/event') }}/{{ $e->foto }}" style="width:100px;" alt=""></td>
                             <td>{{ $e->judul }}</td>
                             <td>{{ $e->waktu }}</td>
                             <td>{{ $e->jam }}</td>

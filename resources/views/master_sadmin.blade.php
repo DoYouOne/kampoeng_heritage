@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="index.html">
-                            <img src="{{ URL::asset ('assets/layouts/layout/img/logo.png')}}" alt="logo" class="logo-default" /> </a>
+                            <img src="{{ URL::asset ('assets/kampoengheritage.png')}}" style="width:140px;" alt="logo" class="logo-default" /> </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
                         </div>
@@ -161,19 +161,19 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('Sadmin_event') }}" class="nav-link nav-toggle">
-                                    <i class="icon-folder"></i>
+                                    <i class="icon-star"></i>
                                     <span class="title">Event</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('Sadmin_kuliner') }}" class="nav-link nav-toggle">
-                                    <i class="icon-folder"></i>
+                                    <i class="icon-pie-chart"></i>
                                     <span class="title">Kuliner</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('Sadmin_akomodasi') }}" class="nav-link nav-toggle">
-                                    <i class="icon-folder"></i>
+                                    <i class="icon-paper-plane"></i>
                                     <span class="title">Akomodasi</span>
                                 </a>
                             </li>
@@ -185,7 +185,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('Sadmin_ulasan') }}" class="nav-link nav-toggle">
-                                    <i class="icon-folder"></i>
+                                    <i class="icon-bubbles"></i>
                                     <span class="title">Ulasan</span>
                                 </a>
                             </li>
@@ -194,7 +194,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('Sadmin_hakakses') }}" class="nav-link nav-toggle">
-                                    <i class="icon-folder"></i>
+                                    <i class="icon-briefcase"></i>
                                     <span class="title">Hak Akses</span>
                                 </a>
                             </li>

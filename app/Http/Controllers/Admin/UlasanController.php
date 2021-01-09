@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\DB;
 class UlasanController extends Controller
 {
     public function index(){
-        $data['testimoni'] = \App\Models\Testimoni::all();
+        $data['testimoni'] = DB::table('testimoni')
+                            ->join('users', 'testimoni.id_user', '=', 'users.id')
+                            ->orderByDesc('tanggal')
+                            ->get();
         return view('testimoni.a_tampil_testimoni',$data);
     }
 

@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\DB;
 class BerandaController extends Controller
 {
     public function index(){
-        return view('beranda.beranda_sadmin');
+        $data = array(
+            'user'      => DB::table('users')->count(),
+            'event'     => DB::table('event')->count(),
+            'ulasan'    => DB::table('testimoni')->count()
+        );
+        return view('beranda.beranda_sadmin', $data);
     }
 }
