@@ -50,7 +50,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mt-overlay-2">
-                                    <img src="{{ url('uploads/event') }}/{{ $e->foto }}" />
+                                    <img src="{{ url('uploads/event') }}/{{ $e->foto }}" style="height: 240px;" />
                                     <div class="mt-overlay">
                                         <h2>{{ $e->judul }}</h2>
                                         <a class="mt-info btn default btn-outline" href="{{ url('detail_event') }}/{{ $e->id }}">Detail Event</a>
