@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="{{ url('/') }}">
-                            <img src="{{ URL::asset ('assets/kampoengheritage.png')}}" style="width:140px;" alt="logo" class="logo-default" /> </a>
+                            <img src="{{ URL::asset ('assets/logo.png')}}" style="width:170px; height: 20px;" alt="logo" class="logo-default" /> </a>
                         <div class="menu-toggler sidebar-toggler">
                             <span></span>
                         </div>
