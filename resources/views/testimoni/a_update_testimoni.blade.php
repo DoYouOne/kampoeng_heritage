@@ -5,7 +5,7 @@
     <div class="portlet light bordered">
         <div class="portlet-title">
             <div class="caption">
-                <span class="caption-subject font-dark sbold uppercase">Ubah Data Hak Akses</span>
+                <span class="caption-subject font-dark sbold uppercase">Ubah Ulasan</span>
             </div>
         </div>
         <div class="portlet-body form">
