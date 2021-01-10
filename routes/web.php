@@ -133,6 +133,7 @@ Route::prefix('/')->group(function(){
     Route::get('akomodasi', [App\Http\Controllers\User\AkomodasiController::class, 'index'])->name('akomodasi');
     Route::get('/detail_akomodasi/{id}', [App\Http\Controllers\User\AkomodasiController::class, 'detail_akomodasi'])->name('detail_akomodasi');
     Route::get('galeri', [App\Http\Controllers\User\GaleriController::class, 'index'])->name('galeri');
+    Route::get('/detail_galeri/{id}', [App\Http\Controllers\User\GaleriController::class, 'detail_galeri'])->name('detail_galeri');
     Route::get('tentang_kami', [App\Http\Controllers\User\Tentang_kamiController::class, 'index'])->name('tentang_kami');
     Route::get('testimoni', [App\Http\Controllers\User\TestimoniController::class, 'index'])->name('testimoni');
 });

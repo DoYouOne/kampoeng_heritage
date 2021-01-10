@@ -14,13 +14,16 @@
                             <div class="col-md-12">
                                 <div class="mt-overlay-2">
                                     <img src="{{ url('uploads/galeri') }}/{{ $e->foto }}" style="height:240px; width:auto" />
+                                    <div class="mt-overlay">
+                                        <a class="mt-info btn default btn-outline" href="{{ url('detail_galeri') }}/{{ $e->id }}">Detail Galeri</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <br>
                     <hr>
-                    <h5>Keterangan : {{ $e->keterangan }}</h5>
+                    {{--  <h5>Keterangan : {{ $e->keterangan }}</h5>  --}}
                     {{-- <i class=" icon-layers font-green"></i>
                         <span class="caption-subject font-green bold uppercase">Overlay 2 - Default</span>
                         <div class="caption-desc font-grey-cascade"> Activate by adding <pre class="mt-code">.mt-overlay-2</pre> class to your element. </div> --}}

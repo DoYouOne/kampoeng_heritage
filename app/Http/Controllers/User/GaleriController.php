@@ -14,4 +14,9 @@ class GaleriController extends Controller
                             ->get();
         return view('galeri.u_tampil_galeri',$data);
     }
+
+    public function detail_galeri($id){
+        $data['galeri'] = \App\Models\Galeri::find($id);
+        return view('galeri.u_detail_galeri', $data);
+    }
 }
