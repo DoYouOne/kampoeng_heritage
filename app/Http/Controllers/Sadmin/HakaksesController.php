@@ -22,7 +22,7 @@ class HakaksesController extends Controller
         \App\Models\User::create([
             'name'          => $request->name,
             'email'        => $request->email,
-            'password'      => $request->password,
+            'password'      => Hash::make($request->password),
             'status'       => $request->status
         ]);
         return redirect('Sadmin_hakakses');
