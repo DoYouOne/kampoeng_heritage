@@ -18,7 +18,7 @@
                                 <th>Foto</th>
                                 <th>Harga mulai</th>
                                 <th>Alamat</th>
-                                <th>Aksi</th>
+                                <th>Detail</th>
                             </thead>
                             <tbody>
                                 @php $no = 1; @endphp
@@ -30,11 +30,8 @@
                                     <td>{{ $e->harga }}</td>
                                     <td>{{ $e->alamat }}</td>
                                     <td>
-                                        <a href="{{ url('Admin_akomodasi/update') }}/{{ $e->id }}">
-                                            <button type="button" class="btn btn-warning">Edit</button>
-                                        </a>
-                                        <a href="{{ url('Admin_akomodasi/aksi_delete') }}/{{ $e->id }}">
-                                            <button type="button" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus {{ $e->nama }} ?');">Hapus</button>
+                                        <a href="{{ url('detail_akomodasi') }}/{{ $e->id }}">
+                                            <button type="button" class="btn btn-primary">Detail</button>
                                         </a>
                                     </td>
                                 </tr>

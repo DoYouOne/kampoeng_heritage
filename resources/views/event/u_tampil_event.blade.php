@@ -10,34 +10,38 @@
           <h3 align="center">Data Seluruh Event</h3><br>
           <div class="portlet light portlet-fit ">
             <div class="portlet-body">
-          <div class="table-responsive">
-            <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
-                <thead>
-                    <th>No</th>
-                    <th>Foto</th>
-                    <th>Judul Event</th>
-                    <th>Tanggal</th>
-                    <th>Jam</th>
-                    <th>Penyelenggara</th>
-                    <th>Deskripsi</th>
-                </thead>
-                <tbody>
-                    @php $no = 1; @endphp
-                    @foreach ($event as $e)
-                    <tr>
-                        <td>{{ $no  }}</td>
-                        <td><img src="{{ url('uploads/event') }}/{{ $e->foto }}" alt="" style="width: 100px; height: auto;"></td>
-                        <td>{{ $e->judul }}</td>
-                        <td>{{ $e->waktu }}</td>
-                        <td>{{ $e->jam }}</td>
-                        <td>{{ $e->penyelenggara }}</td>
-                        <td>{{ $e->deskripsi }}</td>
-                    </tr>
-                    @php $no++; @endphp
-                    @endforeach
-                </tbody>
-            </table>
-          </div>
+                <div class="table-responsive">
+                    <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
+                        <thead>
+                            <th>No</th>
+                            <th>Foto</th>
+                            <th>Judul Event</th>
+                            <th>Tanggal</th>
+                            <th>Jam</th>
+                            <th>Penyelenggara</th>
+                            <th>Detail</th>
+                        </thead>
+                        <tbody>
+                            @php $no = 1; @endphp
+                            @foreach ($event as $e)
+                            <tr>
+                                <td>{{ $no  }}</td>
+                                <td><img src="{{ url('uploads/event') }}/{{ $e->foto }}" alt="" style="width: 100px; height: auto;"></td>
+                                <td>{{ $e->judul }}</td>
+                                <td>{{ $e->waktu }}</td>
+                                <td>{{ $e->jam }}</td>
+                                <td>{{ $e->penyelenggara }}</td>
+                                <td>
+                                    <a href="{{ url('detail_event') }}/{{ $e->id }}">
+                                        <button type="button" class="btn btn-primary">Detail</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            @php $no++; @endphp
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
           </div>
       </div>

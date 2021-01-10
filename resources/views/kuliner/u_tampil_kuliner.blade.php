@@ -15,10 +15,11 @@
                 <thead>
                     <th>No</th>
                       <th>Nama Kuliner</th>
-                      <td>Foto</td>
+                      <th>Foto</th>
                       <th>Harga Mulai</th>
                       <th>Alamat</th>
                       <th>Telepon</th>
+                      <th>Detail</th>
                 </thead>
                 <tbody>
                     @php $no = 1; @endphp
@@ -30,6 +31,11 @@
                         <td>{{ $k->harga }}</td>
                         <td>{{ $k->alamat }}</td>
                         <td>{{ $k->telepon }}</td>
+                        <td>
+                            <a href="{{ url('detail_kuliner') }}/{{ $k->id }}">
+                                <button type="button" class="btn btn-primary">Detail</button>
+                            </a>
+                        </td>
                     </tr>
                     @php $no++; @endphp
                     @endforeach

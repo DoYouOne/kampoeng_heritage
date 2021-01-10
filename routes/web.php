@@ -110,7 +110,7 @@ Route::group(['middleware' => ['auth','CheckRole:1']], function(){
 });
 
 //Hak akses user
-Route::group(['middleware' => ['auth','CheckRole:2']], function(){
+Route::group(['middleware' => ['auth','CheckRole:0,1,2']], function(){
     // Route::get('/beranda', [App\Http\Controllers\User\BerandaController::class, 'index'])->name('beranda');
     // Route::get('/event', [App\Http\Controllers\User\EventController::class, 'index'])->name('event');
     // Route::get('/kuliner', [App\Http\Controllers\User\BerandaController::class, 'kuliner'])->name('kulner');
@@ -129,7 +129,9 @@ Route::prefix('/')->group(function(){
     Route::get('event', [App\Http\Controllers\User\EventController::class, 'index'])->name('event');
     Route::get('/detail_event/{id}', [App\Http\Controllers\User\EventController::class, 'detail_event'])->name('detail_event');
     Route::get('kuliner', [App\Http\Controllers\User\KulinerController::class, 'index'])->name('kulner');
+    Route::get('/detail_kuliner/{id}', [App\Http\Controllers\User\KulinerController::class, 'detail_kuliner'])->name('detail_kuliner');
     Route::get('akomodasi', [App\Http\Controllers\User\AkomodasiController::class, 'index'])->name('akomodasi');
+    Route::get('/detail_akomodasi/{id}', [App\Http\Controllers\User\AkomodasiController::class, 'detail_akomodasi'])->name('detail_akomodasi');
     Route::get('galeri', [App\Http\Controllers\User\GaleriController::class, 'index'])->name('galeri');
     Route::get('tentang_kami', [App\Http\Controllers\User\Tentang_kamiController::class, 'index'])->name('tentang_kami');
     Route::get('testimoni', [App\Http\Controllers\User\TestimoniController::class, 'index'])->name('testimoni');
