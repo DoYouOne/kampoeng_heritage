@@ -85,7 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <li class="dropdown dropdown-user dropdown-dark">
                                             @if(Auth::check() == null)
                                                 <a href="{{ url('/login') }}" class="dropdown-toggle">
-                                                    <img alt="" class="img-circle" src="annonym.png" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
+                                                    <img alt="" class="img-circle" src="{{ URL::asset ('assets/layouts/layout/img/login.png')}}" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
                                                     <span class="username username-hide-mobile">Masuk</span>
                                                 </a>
                                             @else

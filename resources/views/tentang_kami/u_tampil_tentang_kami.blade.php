@@ -4,9 +4,10 @@
 <div class="col-md-12">
     <br>
     <div class="portlet light ">
-            <img src="{{ url('assets/headerkh.jpg') }}" alt="" class="img-responsive" style="width:100%">
-            <h2 align="center">Wisata Kampoeng Heritage Malang</h2>
-        <div class="portlet-body">
+            <img src="{{ url('assets/headerkh.jpg') }}" alt="" class="img-responsive" style="width:100%; height:auto; margin-left:auto; margin-right:auto; padding-top:2%;"
+            <br>
+            <h2 align="center"><b>Wisata Kampoeng Heritage Malang</b></h2>
+        <div class="portlet-body" style="text-align: justify; line-height: 2;">
             <p>&emsp; Malang penuh sejarah. Dari jejak kerajaan kuno abad ke 8 masehi sampai era kolonial Belanda. Kekayaan warisan sejarah itu memunculkan berbagai kawasan Malang heritage. Tidak sedikit yang kemudian dikelola jadi tujuan wisata.
                 Salah satu tujuan wisata Malang heritage itu adalah Kampoeng Heritage Kajoetangan atau Kampung Kayutangan. Sebuah kampung yang sudah tercatat dalam sejarah masa klasik sampai modern.
                 <br>
@@ -86,7 +87,7 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.175536466787!2d112.62541651477927!3d-7.980799894252144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6282304fbc73f%3A0x821f9b179d4d267f!2sKampoeng%20Heritage%20Kajoetangan%20Malang!5e0!3m2!1sid!2sid!4v1610237958575!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7902.351070888775!2d112.627605!3d-7.9808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x821f9b179d4d267f!2sKampoeng%20Heritage%20Kajoetangan%20Malang!5e0!3m2!1sid!2sid!4v1610522548509!5m2!1sid!2sid" width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-md-2"></div>
             </div>
