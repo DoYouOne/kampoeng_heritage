@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mt-overlay-2">
-                                    <img src="{{ url('uploads/galeri') }}/{{ $e->foto }}" style="height:240px; width:auto" />
+                                    <img src="{{ url('uploads/galeri') }}/{{ $e->foto }}" style="height:240px; width:auto; margin-left:auto; margin-right:auto;" />
                                     <div class="mt-overlay">
                                         <a class="mt-info btn default btn-outline" href="{{ url('detail_galeri') }}/{{ $e->id }}">Detail Galeri</a>
                                     </div>
