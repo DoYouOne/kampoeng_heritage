@@ -1,57 +1,39 @@
 @extends('master_user')
 
 @section ('content')
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
-<div class="album py-5 bg-light">
     <div class="container">
-      <div class="row">
-          <h3 align="center">Akomodasi disekitar Kampoeng Heritage Malang</h3><br>
+        <h2 align="center">Akomodasi disekitar Kampoeng Heritage Kajoetangan</h2>
+    </div>
+        @foreach ($akomodasi as $e)
+          @php
+            $kalimat = $e->nama;
+          @endphp
+        <div class="col-md-4">
             <div class="portlet light portlet-fit ">
-                <div class="portlet-body">
-                    <div class="table-responsive">
-                        <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
-                            <thead>
-                                <th>No</th>
-                                <th>Nama Akomodasi</th>
-                                <th>Foto</th>
-                                <th>Harga mulai</th>
-                                <th>Alamat</th>
-                                <th>Detail</th>
-                            </thead>
-                            <tbody>
-                                @php $no = 1; @endphp
-                                @foreach ($akomodasi as $e)
-                                <tr>
-                                    <td>{{ $no  }}</td>
-                                    <td>{{ $e->nama }}</td>
-                                    <td><img src="{{ url('uploads/akomodasi') }}/{{ $e->foto }}" style="width: 50px; height: 50px;" alt=""></td>
-                                    <td>{{ $e->harga }}</td>
-                                    <td>{{ $e->alamat }}</td>
-                                    <td>
-                                        <a href="{{ url('detail_akomodasi') }}/{{ $e->id }}">
-                                            <button type="button" class="btn btn-primary">Detail</button>
-                                        </a>
-                                    </td>
-                                </tr>
-                                @php $no++; @endphp
-                                @endforeach
-                            </tbody>
-                        </table>
-                      </div>
+                <div class="portlet-body" style="height: 430px;">
+                    <div class="mt-element-overlay">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="mt-overlay-2">
+                                    <img src="{{ url('uploads/akomodasi') }}/{{ $e->foto }}" style="height: 240px; margin-top: 3%;" />
+                                    <div class="mt-overlay">
+                                        <h2>{{ Str::limit($kalimat,50) }}</h2>
+                                        <a class="mt-info btn default btn-outline" href="{{ url('detail_akomodasi') }}/{{ $e->id }}">Detail Akomodasi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <br>
+                    <span class="caption-subject font-green bold uppercase"  align="center">{{ Str::limit($kalimat,50) }}</span><br>
+                    <hr>
+                    <h5>{{ Str::limit($e->alamat,100) }}</h5>
+                    <h5>Telepon : {{ $e->telepon }}</h5>
+                    {{-- <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green bold uppercase">Overlay 2 - Default</span>
+                        <div class="caption-desc font-grey-cascade"> Activate by adding <pre class="mt-code">.mt-overlay-2</pre> class to your element. </div> --}}
                 </div>
             </div>
-      </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript">
-  $('#anggota').DataTable({
-      responsive: true
-  } );
-</script>
+        </div>
+        @endforeach
 @stop
