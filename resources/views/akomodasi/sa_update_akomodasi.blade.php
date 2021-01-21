@@ -52,7 +52,7 @@
                 <div class="form-actions">
                     <div class="row">
                         <div class="col-md-offset-5 col-md-7">
-                            <button type="submit" class="btn green">Tambah</button>
+                            <button type="submit" class="btn green">Ubah</button>
                             <button type="reset" class="btn default">Batal</button>
                         </div>
                     </div>

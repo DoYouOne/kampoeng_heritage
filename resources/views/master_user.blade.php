@@ -95,6 +95,20 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </a>
                                             @endif
                                             <ul class="dropdown-menu dropdown-menu-default">
+                                                @if (Auth::check() != null)
+                                                    @if (Auth::user()->status == 0)
+                                                    <li>
+                                                        <a href="{{ url('/Sadmin_beranda') }}">
+                                                            <i class="icon-home"></i> Beralih Menu </a>
+                                                    </li>
+                                                    @endif
+                                                    @if (Auth::user()->status == 1)
+                                                    <li>
+                                                        <a href="{{ url('/Admin_beranda') }}">
+                                                            <i class="icon-home"></i> Beralih Menu </a>
+                                                    </li>
+                                                    @endif
+                                                @endif
                                                 <li>
                                                     <a href="{{ url('/logout') }}">
                                                         <i class="icon-key"></i> Log Out </a>

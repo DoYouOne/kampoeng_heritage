@@ -26,13 +26,13 @@
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="judul" placeholder="Masukan judul event">
                         </div>
-                    </div> 
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Penyelenggara</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" name="penyelenggara" placeholder="Masukan nama penyelengaara">
                         </div>
-                    </div>            
+                    </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Tanggal</label>
                         <div class="col-md-9">
@@ -63,8 +63,8 @@
                 <div class="form-actions">
                     <div class="row">
                         <div class="col-md-offset-3 col-md-9">
-                            <button type="submit" class="btn green">Submit</button>
-                            <button type="reset" class="btn default">Cancel</button>
+                            <button type="submit" class="btn green">Tambah</button>
+                            <button type="reset" class="btn default">Batal</button>
                         </div>
                     </div>
                 </div>

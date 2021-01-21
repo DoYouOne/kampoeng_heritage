@@ -8,14 +8,6 @@
                 <i class="icon-star font-dark"></i>
                 <span class="caption-subject font-dark sbold uppercase">Tambah Event</span>
             </div>
-            <div class="actions">
-                <div class="btn-group btn-group-devided" data-toggle="buttons">
-                    <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
-                        <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                    <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                        <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                </div>
-            </div>
         </div>
         <div class="portlet-body form">
             <form class="form-horizontal" role="form" method="POST" action="{{ url('Admin_event/aksi_tambah') }} "enctype="multipart/form-data">
@@ -63,8 +55,8 @@
                 <div class="form-actions">
                     <div class="row">
                         <div class="col-md-offset-3 col-md-9">
-                            <button type="submit" class="btn green">Submit</button>
-                            <button type="reset" class="btn default">Cancel</button>
+                            <button type="submit" class="btn green">Tambah</button>
+                            <button type="reset" class="btn default">Batal</button>
                         </div>
                     </div>
                 </div>
